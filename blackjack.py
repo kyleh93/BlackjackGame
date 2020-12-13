@@ -59,7 +59,7 @@ while True:
                         input_not_valid = True
                 except:
                     print('Need to enter a number')
-                    input_not_valid = False
+                    input_not_valid = True
             players[i].bet(bet_amount)
 
         dealer.deal_starting_hand(players, deck)
