@@ -147,9 +147,13 @@ class Player(object):
             print(f"{self.name}: [H]it, [S]tand, [D]ouble-down, or S[p]lit")
             while choice not in 'HhSsDdPp':
                 choice = input('choice: ').lower()
-        else:
+        elif len(self.hands[index].cards) == 2:
             print(f"{self.name}: [H]it, [S]tand, or [D]ouble-down")
             while choice not in 'HhSsDd':
+                choice = input('choice: ').lower()
+        else:
+            print(f"{self.name}: [H]it, or [S]tand")
+            while choice not in 'HhSs':
                 choice = input('choice: ').lower()
         return choice
 
